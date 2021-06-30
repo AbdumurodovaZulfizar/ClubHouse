@@ -1,0 +1,22 @@
+<div class="col-12 col-md-6 mb-4">
+
+  <article class="row">
+    <div class="col-10">
+      <%= render 'form' %>
+    </div>
+  </article>
+
+  <% @posts.each do |post| %>
+
+  <div class="row my-3">
+    
+    <div class="">
+      <strong class="text-white"> Abdumurodova Zulfizar </strong><br />
+      <small class="text-white">@zulfizar</small>
+      <p class="text-white"> <%= post.post %> </p>
+    </div>
+  </div>
+
+  <% end %>
+  
+</div>
