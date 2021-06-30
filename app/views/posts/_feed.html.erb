@@ -1,4 +1,7 @@
 <div class="col-12 col-md-6 mb-4">
+  
+
+  <% if user_signed_in? %>
 
   <article class="row">
     <div class="col-10">
@@ -11,12 +14,24 @@
   <div class="row my-3">
     
     <div class="">
-      <strong class="text-white"> Abdumurodova Zulfizar </strong><br />
-      <small class="text-white">@zulfizar</small>
+      <strong class="text-white"><%=post.user.name %></strong><br />
+      <small class="text-white"><%= post.user.username %></small>
       <p class="text-white"> <%= post.post %> </p>
     </div>
   </div>
 
   <% end %>
-  
+  <% else %>
+  <% @posts.each do |post| %>
+
+  <div class="row my-3">
+    
+    <div class="">
+      <p class="text-white"> <%= post.post %> </p>
+    </div>
+  </div>
+
+  <% end %>
+  <% end %>
+
 </div>
