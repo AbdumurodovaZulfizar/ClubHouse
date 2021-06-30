@@ -1235,3 +1235,55 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 71ms (Views: 68.2ms | ActiveRecord: 1.9ms | Allocations: 12052)
 
 
+Started GET "/" for ::1 at 2021-06-30 11:09:51 +0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/posts/_profile.html.erb:9
+  Rendered posts/_profile.html.erb (Duration: 24.0ms | Allocations: 4105)
+  Rendered posts/_form.html.erb (Duration: 33.5ms | Allocations: 13590)
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/_feed.html.erb:12
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_feed.html.erb:17
+  Rendered posts/_feed.html.erb (Duration: 50.0ms | Allocations: 17633)
+  Rendered posts/index.html.erb within layouts/application (Duration: 96.0ms | Allocations: 29237)
+  Rendered layout layouts/application.html.erb (Duration: 884.2ms | Allocations: 151933)
+Completed 500 Internal Server Error in 911ms (ActiveRecord: 3.5ms | Allocations: 159602)
+
+
+
+Sprockets::DoubleLinkError - Multiple files with the same output path cannot be linked ("posts.css")
+In "C:/Users/user/Desktop/ClubHouse/app/assets/config/manifest.js" these files were linked:
+  - C:/Users/user/Desktop/ClubHouse/app/assets/stylesheets/posts.css
+  - C:/Users/user/Desktop/ClubHouse/app/assets/stylesheets/posts.scss:
+
+Started POST "/__better_errors/aa756be2a1238567/variables" for ::1 at 2021-06-30 11:09:52 +0500
+Started GET "/" for ::1 at 2021-06-30 11:10:56 +0500
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/posts/_profile.html.erb:9
+  Rendered posts/_profile.html.erb (Duration: 3.3ms | Allocations: 940)
+  Rendered posts/_form.html.erb (Duration: 5.4ms | Allocations: 3080)
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/_feed.html.erb:12
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_feed.html.erb:17
+  Rendered posts/_feed.html.erb (Duration: 12.8ms | Allocations: 4699)
+  Rendered posts/index.html.erb within layouts/application (Duration: 25.3ms | Allocations: 6805)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered posts/_header.html.erb (Duration: 1.2ms | Allocations: 485)
+  Rendered posts/_footer.html.erb (Duration: 0.5ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 817.6ms | Allocations: 128446)
+Completed 200 OK in 820ms (Views: 817.5ms | ActiveRecord: 1.4ms | Allocations: 129148)
+
+
