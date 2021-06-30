@@ -1,12 +1,12 @@
-
-
 <section class="section">
   <div class="container">
     <div class="row">
-    
-   
+    <% if user_signed_in? %>
+    <%= render 'profile' %>
       <%= render "feed" %>
-   
+    <% else %>
+      <%= render "feed" %>
+    <% end %>
       
     </div>
   </div>
