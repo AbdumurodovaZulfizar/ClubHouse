@@ -4,19 +4,12 @@
   <i class="fas fa-users fa-2x"></i>
   <% end %>
 <span class="float-end">
-  <% if user_signed_in? %>
-  <%= link_to "New Post", new_post_path, class:"py-2 d-none d-md-inline-block nav-link text-secondary fw-bolder" %>
-    <%= link_to current_user.name, edit_user_registration_path, class:"py-2 d-none d-md-inline-block nav-link text-secondary fw-bolder" %>
-    <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"py-2 d-none d-md-inline-block nav-link text-secondary fw-bolder" %>
 
-    
-  <% else %>
- 
-    <%= link_to "Sign Up", new_user_registration_path, class:"py-2 d-none d-md-inline-block nav-link text-secondary fw-bolder" %>
-    
-    <%= link_to "Log In", new_user_session_path, class:"py-2 d-none d-md-inline-block nav-link text-secondary fw-bolder" %>
-
-     <% end %>
+  <%= create_post_btn %>
+    <%= current_user_btn %>
+      <%= sign_out_btn %>
+      <%= sign_up_btn %> 
+      <%= log_in_btn %>
 </span>
   </nav>
 </header>
