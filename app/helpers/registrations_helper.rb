@@ -11,7 +11,7 @@ module RegistrationsHelper
   def sign_out_btn
     out = ''
     if user_signed_in?
-      out << link_to('Sign Out', destroy_user_session_path, class: 'p-3 d-inline-block nav-link text-secondary fw-bolder')
+      out << link_to('Sign Out', destroy_user_session_path, method: :delete, class: 'p-3 d-inline-block nav-link text-secondary fw-bolder')
     end
     out.html_safe
   end
