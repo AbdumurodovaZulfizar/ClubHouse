@@ -1,7 +1,5 @@
 module ApplicationHelper
   def alert_btn
-    if notice
-      render :partial => "layouts/alerts"
-    end
+    return  render :partial => 'layouts/alerts' if notice
   end
 end
