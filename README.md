@@ -32,6 +32,8 @@ This project was built to demonstrate the understanding for Rails authentication
 - In your local PC, open your terminal in the folder you would like to clone the repository into
 - Clone the repository with the command: `git clone (copied link)`; like so: `git clone https://github.com/AbdumurodovaZulfizar/ClubHouse`
 - After the clone, type in the command `cd ClubHouse` to access the directory on the terminal
+- And type `bundle install` to load all gems in this folder.
+- After run `rails db:migrate` for migration.
 - Type `rails s` on the terminal, and type `localhost:3000` on your browser.
 - And then you can Sign In.
 

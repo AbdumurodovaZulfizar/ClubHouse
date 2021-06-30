@@ -1,10 +1,6 @@
 class User < ApplicationRecord
   has_many :posts
-  validates :name, presence: true
-  validates :username, presence: true
-  validates :password, presence: true
-  validates :email, presence: true
-  validates :password_confirmation, presence: true
+  validates :name, :username, :password, :email, presence: true
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
