@@ -1809,3 +1809,50 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 67ms (Views: 65.5ms | ActiveRecord: 0.4ms | Allocations: 5847)
 
 
+Started GET "/users/sign_in" for ::1 at 2021-06-30 14:44:32 +0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 733)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 76.6ms | Allocations: 20697)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered posts/_header.html.erb (Duration: 1.7ms | Allocations: 552)
+  Rendered posts/_footer.html.erb (Duration: 0.4ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 148.7ms | Allocations: 29064)
+Completed 200 OK in 179ms (Views: 161.3ms | ActiveRecord: 1.2ms | Allocations: 38898)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-06-30 14:44:35 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"abdumurodovazulfizar77@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "abdumurodovazulfizar77@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 279ms (ActiveRecord: 0.5ms | Allocations: 6096)
+
+
+Started GET "/" for ::1 at 2021-06-30 14:44:35 +0500
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/posts/_profile.html.erb:9
+  Rendered posts/_profile.html.erb (Duration: 8.4ms | Allocations: 4045)
+  Rendered posts/_form.html.erb (Duration: 5.2ms | Allocations: 3623)
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/_feed.html.erb:12
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_feed.html.erb:17
+  Rendered posts/_feed.html.erb (Duration: 23.3ms | Allocations: 7649)
+  Rendered posts/index.html.erb within layouts/application (Duration: 41.9ms | Allocations: 13470)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 1.3ms | Allocations: 152)
+  Rendered posts/_header.html.erb (Duration: 0.7ms | Allocations: 201)
+  Rendered posts/_footer.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 95.2ms | Allocations: 18215)
+Completed 200 OK in 107ms (Views: 97.6ms | ActiveRecord: 2.0ms | Allocations: 23160)
+
+

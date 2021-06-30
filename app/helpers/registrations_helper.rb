@@ -1,3 +1,4 @@
+# rubocop:disable Layout/LineLength, Layout/EndOfLine
 module RegistrationsHelper
   def current_user_btn
     out = ''
@@ -31,3 +32,4 @@ module RegistrationsHelper
     out.html_safe
   end
 end
+# rubocop:enable Layout/LineLength, Layout/EndOfLine
