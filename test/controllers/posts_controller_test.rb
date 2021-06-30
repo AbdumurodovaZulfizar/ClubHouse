@@ -33,7 +33,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should update post" do
+  test 'should update post' do
     patch post_url(@post), params: { post: { post: @post.post } }
     assert_redirected_to post_url(@post)
   end
