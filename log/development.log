@@ -1065,3 +1065,173 @@ Entrypoint application = js/application-e421b4aa3f716bebdab1.js js/application-e
 Completed 200 OK in 3017ms (Views: 2997.8ms | ActiveRecord: 1.4ms | Allocations: 22998)
 
 
+Started GET "/" for ::1 at 2021-06-30 10:43:22 +0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/posts/_profile.html.erb:9
+  Rendered posts/_profile.html.erb (Duration: 68.7ms | Allocations: 4107)
+  Rendered posts/_form.html.erb (Duration: 86.5ms | Allocations: 13590)
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/_feed.html.erb:12
+  Rendered posts/_feed.html.erb (Duration: 123.9ms | Allocations: 14974)
+  Rendered posts/index.html.erb within layouts/application (Duration: 227.7ms | Allocations: 26577)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in C:/Users/user/Desktop/ClubHouse/public/packs
+[Webpacker] warning ..\..\package.json: No license field
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: e2a8a876c5815bee1e21
+Version: webpack 4.46.0
+Time: 1685ms
+Built at: 06/30/2021 10:43:26 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-e421b4aa3f716bebdab1.js    125 KiB  application  [emitted] [immutable]  application
+js/application-e421b4aa3f716bebdab1.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-e421b4aa3f716bebdab1.js js/application-e421b4aa3f716bebdab1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered posts/_header.html.erb (Duration: 5.0ms | Allocations: 464)
+  Rendered posts/_footer.html.erb (Duration: 0.6ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 4237.2ms | Allocations: 41654)
+Completed 200 OK in 4276ms (Views: 4247.0ms | ActiveRecord: 3.7ms | Allocations: 49364)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-06-30 10:43:29 +0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 0.3ms | Allocations: 3595)
+
+
+Started GET "/" for ::1 at 2021-06-30 10:43:29 +0500
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/_feed.html.erb:25
+  Rendered posts/_feed.html.erb (Duration: 2.7ms | Allocations: 836)
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1087)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.6ms | Allocations: 151)
+  Rendered posts/_header.html.erb (Duration: 0.7ms | Allocations: 165)
+  Rendered posts/_footer.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 66.1ms | Allocations: 5868)
+Completed 200 OK in 68ms (Views: 67.0ms | ActiveRecord: 0.3ms | Allocations: 6495)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-06-30 10:43:31 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 708)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 24.6ms | Allocations: 11128)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered posts/_header.html.erb (Duration: 0.5ms | Allocations: 195)
+  Rendered posts/_footer.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 86.6ms | Allocations: 15560)
+Completed 200 OK in 104ms (Views: 101.5ms | ActiveRecord: 0.0ms | Allocations: 17673)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-06-30 10:43:34 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"abdumurodovazulfizar77@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "abdumurodovazulfizar77@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 265ms (ActiveRecord: 0.6ms | Allocations: 5163)
+
+
+Started GET "/" for ::1 at 2021-06-30 10:43:34 +0500
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:4
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/posts/_profile.html.erb:9
+  Rendered posts/_profile.html.erb (Duration: 6.3ms | Allocations: 941)
+  Rendered posts/_form.html.erb (Duration: 4.8ms | Allocations: 3091)
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/_feed.html.erb:12
+  Rendered posts/_feed.html.erb (Duration: 10.0ms | Allocations: 3879)
+  Rendered posts/index.html.erb within layouts/application (Duration: 21.7ms | Allocations: 5967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 43)
+  Rendered posts/_header.html.erb (Duration: 0.3ms | Allocations: 149)
+  Rendered posts/_footer.html.erb (Duration: 1.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 73.8ms | Allocations: 10338)
+Completed 200 OK in 77ms (Views: 73.6ms | ActiveRecord: 1.9ms | Allocations: 10976)
+
+
+Started POST "/posts" for ::1 at 2021-06-30 10:44:09 +0500
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"post"=>"Hello. Welcome to ClubHouse - a new app to chat with friends!"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:28:in `block in create'
+  [1m[36mPost Create (1.9ms)[0m  [1m[32mINSERT INTO "posts" ("post", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["post", "Hello. Welcome to ClubHouse - a new app to chat with friends!"], ["created_at", "2021-06-30 05:44:09.435913"], ["updated_at", "2021-06-30 05:44:09.435913"], ["user_id", 1]]
+  ↳ app/controllers/posts_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:28:in `block in create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 140ms (ActiveRecord: 4.7ms | Allocations: 13140)
+
+
+Started GET "/" for ::1 at 2021-06-30 10:44:09 +0500
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/posts/_profile.html.erb:9
+  Rendered posts/_profile.html.erb (Duration: 4.9ms | Allocations: 935)
+  Rendered posts/_form.html.erb (Duration: 3.3ms | Allocations: 3076)
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/_feed.html.erb:12
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/_feed.html.erb:17
+  Rendered posts/_feed.html.erb (Duration: 14.5ms | Allocations: 5045)
+  Rendered posts/index.html.erb within layouts/application (Duration: 24.5ms | Allocations: 7067)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered posts/_header.html.erb (Duration: 0.4ms | Allocations: 149)
+  Rendered posts/_footer.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 69.1ms | Allocations: 11417)
+Completed 200 OK in 71ms (Views: 68.2ms | ActiveRecord: 1.9ms | Allocations: 12052)
+
+
